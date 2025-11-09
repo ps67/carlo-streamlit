@@ -4,7 +4,6 @@ import streamlit as st
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-import os
 from cryptography.fernet import Fernet
 
 # -------------------------------
@@ -215,5 +214,6 @@ def carloerba_scraper(email, password, excel_path, manual_references, search_opt
 # -------------------------------
 if st.button("Lancer le scraping"):
     carloerba_scraper(email, password, excel_path, manual_references, search_option)
+
 
 
