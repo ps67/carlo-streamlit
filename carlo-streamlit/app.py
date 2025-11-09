@@ -2,7 +2,6 @@
 
 import streamlit as st
 from datetime import datetime
-import threading
 import time
 import pandas as pd
 import requests
@@ -38,9 +37,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Lancer l’horloge dans un thread séparé
-thread = threading.Thread(target=update_clock, daemon=True)
-thread.start()
 
 st.write("## Bienvenue sur le dashboard !")
 
@@ -233,3 +229,4 @@ def carloerba_scraper(email, password, excel_path, manual_references, search_opt
 # -------------------------------
 if st.button("Lancer le scraping"):
     carloerba_scraper(email, password, excel_path, manual_references, search_option)
+
