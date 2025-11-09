@@ -4,7 +4,7 @@ import streamlit as st
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-from cryptography.fernet import Fernet
+#from cryptography.fernet import Fernet
 
 # -------------------------------
 # 1️⃣ Barre supérieure avec ton nom et horloge dynamique
@@ -214,6 +214,7 @@ def carloerba_scraper(email, password, excel_path, manual_references, search_opt
 # -------------------------------
 if st.button("Lancer le scraping"):
     carloerba_scraper(email, password, excel_path, manual_references, search_option)
+
 
 
 
