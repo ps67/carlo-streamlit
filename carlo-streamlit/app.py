@@ -1,8 +1,6 @@
 # app.py
 
 import streamlit as st
-from datetime import datetime
-import time
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
@@ -12,18 +10,6 @@ from cryptography.fernet import Fernet
 # -------------------------------
 # 1️⃣ Barre supérieure avec ton nom et horloge dynamique
 # -------------------------------
-
-# Créer un placeholder pour afficher l'horloge
-clock_placeholder = st.empty()
-
-# Fonction qui met à jour l'horloge toutes les secondes
-def update_clock():
-    while True:
-        now = datetime.now().strftime("%H:%M:%S")  # Format HH:MM:SS
-        clock_placeholder.markdown(
-            f"<h3 style='color:white;'>{now}</h3>", unsafe_allow_html=True
-        )
-        time.sleep(1)  # Met à jour toutes les secondes
 
 # Barre supérieure HTML/CSS
 st.markdown(
@@ -229,4 +215,5 @@ def carloerba_scraper(email, password, excel_path, manual_references, search_opt
 # -------------------------------
 if st.button("Lancer le scraping"):
     carloerba_scraper(email, password, excel_path, manual_references, search_option)
+
 
