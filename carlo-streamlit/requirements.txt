@@ -5,5 +5,5 @@ pandas
 requests
 BeautifulSoup
 os
-
 Fernet
+
