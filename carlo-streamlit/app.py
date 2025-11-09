@@ -203,9 +203,9 @@ def carloerba_scraper(email, password, excel_path, manual_references, search_opt
         st.dataframe(df_resultats.style.applymap(color_availability, subset=['Disponibilité']))
 
         # Export Excel automatique
-        output_file = "resultats_scraping.xlsx"
-        df_resultats.to_excel(output_file, index=False)
-        st.info(f"Données enregistrées dans : {output_file}")
+        # output_file = "resultats_scraping.xlsx"
+        # df_resultats.to_excel(output_file, index=False)
+        # st.info(f"Données enregistrées dans : {output_file}")
     else:
         st.warning("⚠️ Aucun produit trouvé.")
 
@@ -214,6 +214,7 @@ def carloerba_scraper(email, password, excel_path, manual_references, search_opt
 # -------------------------------
 if st.button("Lancer le scraping"):
     carloerba_scraper(email, password, excel_path, manual_references, search_option)
+
 
 
 
