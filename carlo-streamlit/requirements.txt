@@ -1,9 +1,10 @@
 streamlit
 pandas
 requests
-beautifulsoup4
+BeautifulSoup
 os
 Fernet
+
 
 
 
